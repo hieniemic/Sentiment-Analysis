@@ -503,7 +503,6 @@ elif choice == 'New Prediction':
 
 elif choice == 'Business Analysis':
     st.write('## Business Analysis')
-    st.image('Newgroup.jpg')
     df['Review Date'] = pd.to_datetime(df['Review Date'])
 
     hotel_id = st.text_input("#### Nhập ID của Khách sạn (Vd: 1_1, 1_2, 2_1, ...):")
