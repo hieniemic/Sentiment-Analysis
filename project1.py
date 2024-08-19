@@ -504,7 +504,9 @@ elif choice == 'New Prediction':
 elif choice == 'Business Analysis':
     st.write('## Business Analysis')
     df['Review Date'] = pd.to_datetime(df['Review Date'])
-
+    st.write('### Danh sách Khách sạn')
+    data_profiles_selected = data_profiles[['Hotel_ID', 'Hotel Name']]
+    st.dataframe(data_profiles_selected.head())
     hotel_id = st.text_input("#### Nhập ID của Khách sạn (Vd: 1_1, 1_2, 2_1, ...):")
     if hotel_id:
         # Filter the DataFrame for the specified hotel ID
